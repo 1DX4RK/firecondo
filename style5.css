@@ -1,0 +1,41 @@
+*{
+    background: rgb(0,87,109);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing:4px;
+}
+div.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.container button{
+   width:200px;
+   height:50px;
+   color:white;
+   border:2px double pink;
+   font-size:1.45rem;
+   transition:ease-out .3s;
+   position:relative;
+   z-index:1;
+}
+.container button:before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    right:50%;
+    /* background-image:linear-gradient(to right,#4458dc 0%,#854fee 100%),radial-gradient(circle at top left,#4458dc,#854fee); */
+    background-color:firebrick;
+}
+.container button:hover{
+    color:white;
+    cursor: pointer;
+}
+.container button:hover:before{
+    transition:.9s all ease;
+    left:0;
+    right:0;
+    z-index: -1;
+}
